@@ -1,20 +1,39 @@
 # distance-weighted-knn
 
-Triển khai bộ phân loại k-NN (k-Nearest Neighbors), một phương pháp học lười (lazy learning). So sánh hiệu suất phân loại khi sử dụng hai phương pháp trọng số khác nhau:
-- **Uniform**: Trọng số bằng nhau cho tất cả hàng xóm
-- **Inverse Distance**: Trọng số nghịch đảo khoảng cách (hàng xóm gần có ảnh hưởng lớn hơn)
+Dự án sử dụng thuật toán **k-Nearest Neighbors (k-NN)** để phân loại bộ dữ liệu Iris với việc so sánh hai phương pháp trọng số: **Uniform** và **Distance**.
 
-Dự án sử dụng tập dữ liệu **Iris** (150 mẫu, 4 đặc trưng, 3 lớp hoa) để đánh giá và so sánh hiệu suất của hai phương pháp.
+## 📦 Cài đặt
 
-## Cài đặt
+### Yêu cầu
+- Python 3.8+
+- pip
+
+### Cài đặt thư viện
+
 ```bash
-pip install -r requirements.txt
+pip install matplotlib seaborn scikit-learn pandas numpy
 ```
 
-## Sử dụng
-```bash
-python compare_weights.py
+Hoặc chạy trực tiếp trong Jupyter Notebook:
+
+```python
+%pip install matplotlib seaborn scikit-learn pandas numpy
 ```
+
+## 🚀 Sử dụng
+
+1. **Mở file notebook:**
+   ```bash
+   jupyter notebook FinalML.ipynb
+   ```
+
+2. **Chạy các cell theo thứ tự:**
+   - **Cell 1:** Import thư viện
+   - **Cell 2:** Tải và chuẩn bị dữ liệu (chia 70% train, 30% test)
+   - **Cell 3:** Định nghĩa hàm phân tích và vẽ biểu đồ
+   - **Cell 4:** Phân tích với trọng số Uniform
+   - **Cell 5:** Phân tích với trọng số Distance
+   - **Cell 6:** Đánh giá và so sánh kết quả
 
 ## Kết quả mong đợi
 - Độ chính xác (Accuracy) trên tập test
